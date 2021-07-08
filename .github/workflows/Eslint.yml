@@ -28,7 +28,8 @@ jobs:
       - name: Install Eslint
         run: sudo apt install eslint
         
+      - name: Install deps
+        run: npm i optionator
+        
       - name: check types
-        run: |
-          cd $GITHUB_WORKSPACE
-          eslint src
+        run: eslint src
