@@ -24,12 +24,20 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/cache
+            !~/cache/exclude
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
 
       - name: Install Eslint
         run: sudo apt install eslint
         
       - name: Install deps
-        run: npm i optionator
+        run: npm i -g optionator
         
       - name: check types
         run: eslint src
