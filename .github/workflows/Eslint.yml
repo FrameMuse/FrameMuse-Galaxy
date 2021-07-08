@@ -37,7 +37,7 @@ jobs:
         run: sudo apt install eslint
         
       - name: Install deps
-        run: npm i -g optionator
+        run: sudo npm i -g optionator
         
       - name: check types
         run: eslint src
