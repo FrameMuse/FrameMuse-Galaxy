@@ -32,12 +32,12 @@ jobs:
             ~/cache
             !~/cache/exclude
           key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
-
+        
+      - name: Install deps
+        run: npm install
+        
       - name: Install Eslint
         run: sudo npm i -g eslint
-        
-#       - name: Install deps
-#         run: npm install
         
       - name: check types
         run: sudo eslint src
