@@ -39,5 +39,5 @@ jobs:
       - name: Install Eslint
         run: sudo npm i -g eslint
         
-      - name: check types & fix possible
-        run: sudo eslint src --fix
+      - name: check types
+        run: sudo eslint src
