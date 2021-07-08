@@ -8,7 +8,7 @@ touch src/app/components/$1/$1.style.$styleExt
 touch src/app/components/$1/$1.test.$indexExt
 touch src/app/components/$1/index.$indexExt
 
-echo "import \"./style.scss\"
+echo "import \"./$1.style.$styleExt\"
 
 interface $1Props {
   children?: any

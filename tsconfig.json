@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
+    "composite": true,
     "experimentalDecorators": true,
-    "baseUrl": "src",
     "target": "ES5",
+    "baseUrl": "src",
     "lib": [
       "dom",
       "ES5",
       "ES6",
       "ESNext"
     ],
-    "allowJs": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
@@ -26,12 +26,12 @@
     "removeComments": true,
     "sourceMap": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "emitDecoratorMetadata": true,
+    "jsx": "react-jsx",
+    "allowJs": true
   },
   "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
+    "src/**/*",
+    "src/**/*.json",
   ]
 }
