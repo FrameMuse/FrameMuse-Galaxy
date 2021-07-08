@@ -1,19 +1,23 @@
 {
-  "name": "framemuse-galaxy",
-  "version": "0.0.3",
+  "name": "@framemuse/framemuse-galaxy",
+  "version": "0.0.4",
   "type": "module",
   "description": "workpspace for bit developing",
   "main": "index.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrameMuse/FrameMuse-Galaxy.git"
+  },
   "engines": {
     "vscode": "^1.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FrameMuse/FrameMuse-Galaxy.git"
   },
   "author": "framemuse",
   "license": "MIT",
