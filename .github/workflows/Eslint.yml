@@ -34,10 +34,10 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
 
       - name: Install Eslint
-        run: npm i -g eslint
+        run: sudo npm i -g eslint
         
 #       - name: Install deps
 #         run: npm install
         
       - name: check types
-        run: eslint src
+        run: sudo eslint src
