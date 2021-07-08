@@ -29,4 +29,6 @@ jobs:
         run: sudo apt install eslint
         
       - name: check types
-        run: eslint src
+        run: |
+          cd $GITHUB_WORKSPACE
+          eslint src
