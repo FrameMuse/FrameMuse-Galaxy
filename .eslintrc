@@ -1,4 +1,21 @@
 {
+    "settings": {
+        "react": {
+            "createClass": "createReactClass", // Regex for Component Factory to use,
+            // default to "createReactClass"
+            "pragma": "React", // Pragma to use, default to "React"
+            "fragment": "Fragment", // Fragment to use (may be a property of <pragma>), default to "Fragment"
+            "version": "detect",
+            "linkComponents": [
+                // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+                "Hyperlink",
+                {
+                    "name": "Link",
+                    "linkAttribute": "to"
+                }
+            ]
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true
@@ -13,7 +30,7 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 12,
+        "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
@@ -24,7 +41,9 @@
         "indent": [
             "error",
             2,
-            { "SwitchCase": 1 }
+            {
+                "SwitchCase": 1
+            }
         ],
         "linebreak-style": [
             "error",
@@ -41,7 +60,9 @@
             "error",
             "never"
         ],
-        "no-multi-spaces": ["error"],
+        "no-multi-spaces": [
+            "error"
+        ],
         "react/react-in-jsx-scope": "off"
     }
 }
