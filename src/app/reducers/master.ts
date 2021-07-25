@@ -1,4 +1,4 @@
-import { Reducer } from "react"
+import type { Reducer } from "react"
 import { combineReducers } from "redux"
 import reducersMap from "./reducers.map.json"
 export const combinedReducers = combineReducers({
