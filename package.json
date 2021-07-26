@@ -17,11 +17,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "react-scripts test",
+    "esfix": "eslint src --fix"
   },
   "author": "framemuse",
   "license": "MIT",
   "dependencies": {
+    "@framemuse/essentials.utils": "^0.27.0",
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
@@ -29,7 +32,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "redux": "^4.1.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^10.2.0",
+    "ts-loader": "^9.2.4",
+    "web-vitals": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^15.12.4",
