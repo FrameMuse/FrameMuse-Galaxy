@@ -17,13 +17,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build -- --profile",
     "test": "react-scripts test",
     "esfix": "eslint src --fix"
   },
   "author": "framemuse",
   "license": "MIT",
   "dependencies": {
-    "@framemuse/essentials.utils": "^0.27.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -34,7 +34,6 @@
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^10.2.0",
-    "ts-loader": "^9.2.4",
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
@@ -45,7 +44,7 @@
     "@types/react-router-dom": "^5.1.8",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "eslint-plugin-react": "^7.24.0",
     "typescript": "^4.3.5",
     "vscode": "^1.1.37"
