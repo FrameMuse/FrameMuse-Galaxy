@@ -1,85 +1,34 @@
-/* SCSS HEX */
-$independence: hsl(218, 32%, 29%);
-$indigo-dye: hsl(211, 45%, 28%);
-$prussian-blue: hsl(215, 37%, 20%);
-$yale-blue: hsl(212, 45%, 30%);
-$spanish-blue: hsl(210, 54%, 44%);
-
-@function color($name, $shade: 1) {
-  @return var(--color-#{$name}-#{$shade});
-
-}
-
-@font-face {
-  font-family: "Manrope";
-  font-weight: 100 1000;
-  src:
-    local("Manrope"),
-    local(Manrope),
-    url("../fonts/Manrope.ttf") format("truetype");
-}
-
-
 * {
+  position: relative;
   box-sizing: border-box;
 }
 
-:root {
-  --color-raisin-1: hsl(215, 20%, 10%);
-  --color-raisin-2: hsl(225, 25%, 20%);
-  --color-raisin-3: hsl(225, 35%, 30%);
-
-  --color-space-cadet-1: hsl(226, 24%, 21%);
-  --color-space-cadet-2: hsl(222, 27%, 24%);
-  // --color-space-cadet-3: hsl(225, 35%, 30%);
-  --color-independence-1: hsl(218, 32%, 29%);
-}
-
 html {
-  font: 1em/1 "Manrope";
+  font: 1em/1 Manrope;
   color: white;
 }
 
 body {
   margin: unset;
-  background: color("raisin", 1);
+  background: $color-raisin-1;
 }
 
-.cv {
-  display: grid;
-  row-gap: 1.5em;
-  align-content: flex-start;
-  justify-items: center;
-
-  padding: 2.5em;
-  width: 50em;
-  height: 50em;
-  margin: 5em auto 0;
-  // border: 1px solid color("space-cadet", 1);
-  // border-radius: 1em 1em 0 0;
-  // transition: 250ms ease background-color;
-
-  // &:hover {
-  //   background: rgba($color: white, $alpha: 0.01);
-  // }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: unset;
 }
 
-
-.cv-author-photo {}
-
-.cv-author-photo__image {
-  width: 10em;
-  border: 0.25em solid color("space-cadet", 1);
-  border-radius: 100%;
+hr {
+  width: 1px;
+  border: unset;
+  border-left: 1px solid $color-independence;
 }
 
-
-.cv-article {
-  padding: 1.5em 2.5em;
-  border: 1px solid color("space-cadet", 1);
-  border-radius: 1em;
-
-  p {
-    line-height: 1.25;
-  }
+h2 {
+  font-size: 1.35em;
 }

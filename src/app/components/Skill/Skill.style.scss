@@ -1,0 +1,44 @@
+@import "/src/assets/scss/inc/colors";
+
+.cv-skill {
+  background: $color-raisin-2;
+  border-radius: 0.25em;
+
+}
+
+/* Header */
+
+.cv-skill__header {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0.75em;
+  border-bottom: 1px solid $color-small-text;
+}
+
+.cv-skill__image {
+  $size: 1.5em;
+
+  width: $size;
+  height: $size;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 0.5em;
+}
+
+.cv-skill__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Content */
+
+.cv-skill__content {
+  display: grid;
+  row-gap: 0.5em;
+  justify-items: center;
+  padding: 0.5em 0.75em;
+}
+
+.cv-skill__level {
+  font-size: 1rem;
+}

@@ -1,0 +1,27 @@
+%Connector {
+  &::after {
+    content: "";
+
+  }
+}
+
+/* Section */
+
+.section {}
+
+.section__title {
+  @extend %Connector;
+  // padding: 0.5em 1.5em;
+  margin-bottom: 0.5em;
+  // border: 1px solid $color-independence;
+  border-radius: 10em;
+  text-align: center;
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+}
