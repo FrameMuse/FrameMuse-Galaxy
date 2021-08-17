@@ -3,7 +3,7 @@ import "./Skill.style.scss"
 
 interface SkillProps {
   title: string
-  image: string
+  // image: string
   progress: number
 }
 
@@ -19,11 +19,11 @@ function Skill(props: SkillProps) {
   return (
     <div className="cv-skill">
       <div className="cv-skill__header">
-        <img src={props.image} alt="skill" className="cv-skill__image" />
+        {/* <img src={props.image} alt="skill" className="cv-skill__image" /> */}
         <div className="cv-skill__title">{props.title}</div>
       </div>
       <div className="cv-skill__content">
-        <span className="cv-skill__level">{getSkillLevel(props.progress)}</span>
+        <small className="cv-skill__level">{getSkillLevel(props.progress)}</small>
         <ProgressBar progress={props.progress} />
       </div>
     </div>

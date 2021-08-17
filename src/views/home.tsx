@@ -1,7 +1,7 @@
 import "assets/scss/master.scss"
 import AuthorPhoto from "assets/images/author-photo.jpg"
-import { ComponentProps } from "react"
 import Skill from "app/components/Skill/Skill"
+import { ReactComponent as StackOfPaperSVG } from "assets/images/stack-of-square-papers.svg"
 export default function Home() {
   return <CV />
 }
@@ -23,15 +23,15 @@ function CV() {
         </small>
       </article>
       <Section title="Skills">
-        <div className="skils-container grid">
-          <Skill title="CSS" progress={90} image="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" />
-          <Skill title="SCSS" progress={80} image="https://webcademy.ru/blog/wp-content/uploads/2021/03/original-870x400.png" />
-          <Skill title="React" progress={75} image="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png" />
-          <Skill title="Typescript" progress={80} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt25iRJtWbbbIJ2oMqNwbHwkdXTK3P9hzdgg&usqp=CAU" />
-          <Skill title="NodeJs" progress={45} image="https://www.clipartmax.com/png/middle/89-894960_js-discord-bot-logo-node-js-and-react-js.png" />
-          {/* <Skill title="CSS" progress={90} image="none" />
-          <Skill title="CSS" progress={90} image="none" /> */}
-        </div>
+        <Stack title="Front-end">
+          <Skill title="CSS" progress={90} />
+          <Skill title="SCSS" progress={80} />
+          <Skill title="HTML" progress={78} />
+          <Skill title="React" progress={75} />
+          <Skill title="Javascript" progress={90} />
+          <Skill title="Typescript" progress={80} />
+          <Skill title="NodeJs" progress={45} />
+        </Stack>
       </Section>
     </div>
   )
@@ -45,8 +45,24 @@ function Section(props: { title: string; children: any }) {
   return (
     <section className="section">
       <Space size="2.5em" />
-      <h3 className="section__title">{props.title}</h3>
+      <h2 className="section__title">{props.title}</h2>
       {props.children}
     </section>
+  )
+}
+
+function Stack(props: { title: string; children: any }) {
+  return (
+    <div className="stack">
+      <div className="stack-header">
+        <div className="stack-header__image">
+          <StackOfPaperSVG />
+        </div>
+        <h4 className="stack-header__title">{props.title}</h4>
+      </div>
+      <div className="stack__container grid">
+        {props.children}
+      </div>
+    </div>
   )
 }

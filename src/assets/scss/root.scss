@@ -12,11 +12,43 @@
 .section__title {
   @extend %Connector;
   // padding: 0.5em 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   // border: 1px solid $color-independence;
   border-radius: 10em;
   text-align: center;
 }
+
+/* Stack */
+
+$stack-text-color: $color-small-text;
+
+.stack {
+  border: 1px solid $color-space-cadet-1;
+  border-radius: 0.5em;
+}
+
+.stack-header {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 1px solid $color-space-cadet-1;
+  color: $stack-text-color;
+}
+
+.stack-header__title {
+  font-weight: 500;
+}
+
+.stack-header__image {
+  width: 1.33em;
+  height: 1.33em;
+  margin-right: 0.5em;
+}
+
+.stack__container {
+  padding: 1.5em;
+}
+
 
 /* Grid */
 

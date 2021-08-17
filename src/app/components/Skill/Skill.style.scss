@@ -1,9 +1,21 @@
 @import "/src/assets/scss/inc/colors";
 
 .cv-skill {
-  background: $color-raisin-2;
+  border: 1px solid $color-independence;
   border-radius: 0.25em;
+  transition: 150ms linear background-color;
 
+  // * {
+  //   transition: 150ms linear filter;
+  // }
+
+  &:hover {
+    background: rgba($color: $color-independence, $alpha: 0.25);
+
+    // * {
+    //   filter: blur(4px);
+    // }
+  }
 }
 
 /* Header */
@@ -12,7 +24,6 @@
   display: flex;
   align-items: center;
   padding: 0.5em 0.75em;
-  border-bottom: 1px solid $color-small-text;
 }
 
 .cv-skill__image {
@@ -40,5 +51,6 @@
 }
 
 .cv-skill__level {
-  font-size: 1rem;
+  color: $color-small-text;
+  text-transform: capitalize;
 }
