@@ -35,7 +35,7 @@ function CV() {
             Gmail: <a target="_blank" href="mailto:minicablestone@gmail.com" rel="noreferrer">minicablestone@gmail.com</a>
           </p>
         </div>
-        <small className="cv-article__small">{user.name} - <a href={user.url} target="_blank" rel="noopener noreferrer">Github</a></small>
+        <small className="cv-article__small">{user.name} - <a href={user.html_url} target="_blank" rel="noopener noreferrer">Github</a></small>
       </article>
       <Section title="Skills">
         <Stack title="Front-end">
