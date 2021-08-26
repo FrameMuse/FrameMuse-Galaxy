@@ -4,6 +4,8 @@ import { ReactComponent as StackOfPaperSVG } from "assets/images/stack-of-square
 import Author from "./Author"
 import { dispatchGithubUser } from "app/api/github"
 import { useSelector } from "react-redux"
+import Preview from "app/components/Preview/Preview"
+import StandoffCaseJPG from "assets/images/projects/standoffcase.jpg"
 dispatchGithubUser()
 export default function Home() {
   return <CV />
@@ -45,6 +47,19 @@ function CV() {
           <Skill title="Typescript" progress={80} />
           <Skill title="NodeJs" progress={25} />
         </Stack>
+      </Section>
+      <Section title="Projects">
+        <div className="project-previews grid">
+          <Preview
+            title="StandoffCase"
+            desc="Full website on react from scratch. I built the front side of the project using typescript with React[redux] & SCSS."
+            image={StandoffCaseJPG}
+            urls={[
+              "https://standoffcase.net",
+              "https://casesimulator.framemuse.com"
+            ]}
+          />
+        </div>
       </Section>
     </div>
   )
