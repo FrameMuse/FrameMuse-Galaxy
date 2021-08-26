@@ -17,10 +17,23 @@ function CV() {
       <Space size="1.5em" />
       <article className="cv-article">
         <div className="cv-article__content">
-          <h3 className="cv-article__title">Biography</h3>
-          <p className="cv-article__text">{user.bio} </p>
+          <h3 className="cv-article__title">Hello!</h3>
+          <p className="cv-article__text">
+            Here you can find my skills and some projects I built.<br />
+            <small>I'm so lazy to add projects, so here's only one</small><br />
+            <br />
+            I always work on projects that not only will satisfy demands of consumers
+            but also give them nice approaches and quick responses.
+            My desire is to make people happy about using a website.<br />
+            <br />
+            If you want to contact me:
+            <br />
+            Telegram: <a target="_blank" href="https://t.me/framemuse" rel="noreferrer">@framemuse</a>
+            <br />
+            Gmail: <a target="_blank" href="mailto:minicablestone@gmail.com" rel="noreferrer">minicablestone@gmail.com</a>
+          </p>
         </div>
-        <small className="cv-article__small">{user.location}</small>
+        <small className="cv-article__small">{user.name} - <a href={user.url} target="_blank" rel="noopener noreferrer">Github</a></small>
       </article>
       <Section title="Skills">
         <Stack title="Front-end">
