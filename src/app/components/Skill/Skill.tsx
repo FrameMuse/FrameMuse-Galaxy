@@ -9,12 +9,12 @@ interface SkillProps {
 
 function Skill(props: SkillProps) {
   function getSkillLevel(progress: number) {
-    if (progress < 25) return "novice"
+    if (progress <= 25) return "beginner"
     if (progress < 50) return "sufficient"
     if (progress < 75) return "proficient"
     if (progress <= 100) return "advanced"
 
-    return "zero"
+    return "noob"
   }
   return (
     <div className="cv-skill">

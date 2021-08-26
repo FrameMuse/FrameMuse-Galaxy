@@ -1,0 +1,28 @@
+.cv-author {}
+
+.cv-author__container {
+  display: flex;
+  // align-items: center;
+  padding: 1.5em;
+  border: 1px solid $color-space-cadet-1;
+  border-radius: 1em;
+}
+
+.cv-author__side {
+  display: grid;
+  align-content: space-between;
+  width: 7.5em;
+  word-break: break-word;
+}
+
+.cv-author__links {}
+
+/* Photo */
+
+.cv-author-photo {}
+
+.cv-author-photo__image {
+  width: 10em;
+  border: 0.25em solid $color-space-cadet-1;
+  border-radius: 100%;
+}

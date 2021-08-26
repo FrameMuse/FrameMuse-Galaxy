@@ -1,26 +1,26 @@
 import "assets/scss/master.scss"
-import AuthorPhoto from "assets/images/author-photo.jpg"
 import Skill from "app/components/Skill/Skill"
 import { ReactComponent as StackOfPaperSVG } from "assets/images/stack-of-square-papers.svg"
+import Author from "./Author"
+import { dispatchGithubUser } from "app/api/github"
+import { useSelector } from "react-redux"
+dispatchGithubUser()
 export default function Home() {
   return <CV />
 }
 
 function CV() {
+  const user = useSelector(state => state.user)
   return (
     <div className="cv">
-      <div className="cv-author-photo">
-        <img src={AuthorPhoto} alt="author" className="cv-author-photo__image" />
-      </div>
+      <Author />
       <Space size="1.5em" />
       <article className="cv-article">
         <div className="cv-article__content">
           <h3 className="cv-article__title">Biography</h3>
-          <p className="cv-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint distinctio dignissimos ea. Eaque minus dolorum aliquam delectus sapiente consequatur quod fugiat aliquid blanditiis doloremque? Sequi modi quas doloribus quisquam maxime.</p>
+          <p className="cv-article__text">{user.bio} </p>
         </div>
-        <small className="cv-article__small">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </small>
+        <small className="cv-article__small">{user.location}</small>
       </article>
       <Section title="Skills">
         <Stack title="Front-end">
@@ -30,7 +30,7 @@ function CV() {
           <Skill title="React" progress={75} />
           <Skill title="Javascript" progress={90} />
           <Skill title="Typescript" progress={80} />
-          <Skill title="NodeJs" progress={45} />
+          <Skill title="NodeJs" progress={25} />
         </Stack>
       </Section>
     </div>

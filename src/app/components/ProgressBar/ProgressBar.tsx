@@ -1,8 +1,5 @@
 import "./ProgressBar.style.scss"
-// import "framemuse-utils"
 import { classWithModifiers } from "framemuse-utils"
-
-// classWithModifiers
 
 interface ProgressBarProps {
   progress: number
