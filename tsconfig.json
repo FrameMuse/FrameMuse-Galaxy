@@ -31,7 +31,8 @@
     "skipLibCheck": true,
     "checkJs": false,
     "types": [
-      "node"
+      "node",
+      "react"
     ],
     "typeRoots": [
       "types", "@types"
@@ -39,7 +40,8 @@
   },
   "typeAcquisition": {
     "include": [
-      "node"
+      "node",
+      "react"
     ]
   },
   "include": [
