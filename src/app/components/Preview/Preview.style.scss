@@ -1,10 +1,15 @@
 @import "/src/assets/scss/inc/colors";
 
 .preview {
+  display: grid;
   width: 17.5em;
   border: 1px solid $color-space-cadet-1;
   border-radius: 0.5em;
   overflow: hidden;
+
+  &:hover>.preview__image {
+    object-position: bottom;
+  }
 }
 
 .preview__image {
@@ -13,6 +18,22 @@
   object-fit: cover;
   object-position: top;
   border-bottom: 1px solid $color-space-cadet-1;
+  transition: 10s linear object-position;
+
+  // animation: 50s linear PreviewImageScrolling infinite;
+  @keyframes PreviewImageScrolling {
+    0% {
+      object-position: top;
+    }
+
+    50% {
+      object-position: bottom;
+    }
+
+    100% {
+      object-position: top;
+    }
+  }
 }
 
 .preview__desc {
@@ -24,6 +45,7 @@
   display: grid;
   row-gap: 0.25em;
   padding: 0.75em;
+  margin-top: auto;
   border-top: 1px solid $color-space-cadet-1;
 
   a {

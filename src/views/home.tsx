@@ -6,7 +6,14 @@ import { dispatchGithubUser } from "app/api/github"
 import { useSelector } from "react-redux"
 import Preview from "app/components/Preview/Preview"
 import StandoffCaseJPG from "assets/images/projects/standoffcase.jpg"
+import StandoffMarketJPG from "assets/images/projects/standoffmarket.jpg"
+import CSGOKnifeJPG from "assets/images/projects/csgoknife.jpg"
+// import { ClientContextProvider } from "react-fetching-library"
+// import { client, getUserInfo } from "./asd"
+// import { QueryProvider, useQueryContext } from "react-fetching-query"
+
 dispatchGithubUser()
+
 export default function Home() {
   return <CV />
 }
@@ -22,7 +29,6 @@ function CV() {
           <h3 className="cv-article__title">Hello!</h3>
           <p className="cv-article__text">
             Here you can find my skills and some projects I built.<br />
-            <small>I'm so lazy to add projects, so here's only one</small><br />
             <br />
             I always work on projects that not only will satisfy demands of consumers
             but also give them nice approaches and quick responses.
@@ -52,15 +58,32 @@ function CV() {
         <div className="project-previews grid">
           <Preview
             title="StandoffCase"
-            desc="Full website on react from scratch. I built the front side of the project using typescript with React[redux] & SCSS."
+            desc="Full website on react from scratch. I built the front-side of the project using typescript with React[redux] & SCSS."
             image={StandoffCaseJPG}
             urls={[
               "https://standoffcase.net",
               "https://casesimulator.framemuse.com"
             ]}
           />
+          <Preview
+            title="StandoffMarket"
+            desc="Full website on react from scratch. I built the front-side of the project using typescript with React[redux] & CSS."
+            image={StandoffMarketJPG}
+            urls={[
+              "https://standoffmarket.ru"
+            ]}
+          />
+          <Preview
+            title="Standoffcase"
+            desc="Full website from scratch. I built the front-side and a few parts of back-side of the project using javascript, PHP, CSS."
+            image={CSGOKnifeJPG}
+            urls={[
+              "https://csgoknife.ru"
+            ]}
+          />
         </div>
       </Section>
+
     </div>
   )
 }

@@ -57,3 +57,7 @@ $stack-text-color: $color-small-text;
   gap: 1em;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.project-previews {
+  grid-template-columns: repeat(3, 1fr);
+}
