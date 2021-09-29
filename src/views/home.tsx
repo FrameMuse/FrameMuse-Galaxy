@@ -40,8 +40,11 @@ function CV() {
             <br />
             Gmail: <a target="_blank" href="mailto:minicablestone@gmail.com" rel="noreferrer">minicablestone@gmail.com</a>
           </p>
+          {/* <img src="https://www.codewars.com/users/FrameMuse/badges/large" alt="codewars badge" /> */}
         </div>
-        <small className="cv-article__small">{user.name} - <a href={user.html_url} target="_blank" rel="noopener noreferrer">Github</a></small>
+        <small className="cv-article__small">
+          {user.name} - <a href={user.html_url} target="_blank" rel="noopener noreferrer">Github</a> | <a href="https://www.codewars.com/users/FrameMuse" target="_blank" rel="noopener noreferrer">Codewars</a> | <a href="https://stackoverflow.com/users/story/12468111" target="_blank" rel="noopener noreferrer">StackOverflow</a>
+        </small>
       </article>
       <Section title="Skills">
         <Stack title="Front-end">
@@ -83,7 +86,6 @@ function CV() {
           />
         </div>
       </Section>
-
     </div>
   )
 }
