@@ -19,7 +19,6 @@
     "noFallthroughCasesInSwitch": true,
     "module": "ESNext",
     "moduleResolution": "node",
-    "noStrictGenericChecks": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "removeComments": true,
@@ -31,7 +30,6 @@
     "skipLibCheck": true,
     "checkJs": false,
     "types": [
-      "node",
       "react"
     ],
     "typeRoots": [
